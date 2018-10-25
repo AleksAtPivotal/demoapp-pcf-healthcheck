@@ -23,7 +23,7 @@ func main() {
 
 	var app App
 	// crashTrigger is used to crash the app on X number of probes to healthz endpoint
-	app.crashTrigger = 20
+	app.crashTrigger = 4
 
 	http.HandleFunc("/", handleRoot)
 	http.HandleFunc("/healthz", func(w http.ResponseWriter, r *http.Request) {
